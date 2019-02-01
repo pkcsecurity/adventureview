@@ -22,7 +22,7 @@ module.exports = {
     actiontext: [`Why indeed?`],
     actions: {
       "1": user => {
-        user.location = "corporatePeon";
+        user.state.ending = false;
         return user;
       }
     }
