@@ -92,7 +92,20 @@ td {
 a img {
   border: none;
 }
+h2 {
+color: #222;
+font-family: 'Work Sans', sans-serif;
+font-weight: bold;
+text-transform: uppercase;
 
+}
+h2.light {
+color: #FBFAF3;
+font-family: 'Work Sans', sans-serif;
+font-weight: bold;
+text-transform: uppercase;
+
+}
 a.cta-start {
   margin-top: 50px;
   text-decoration: none;
@@ -167,9 +180,9 @@ header {
   margin-bottom: 20px;
 }
 
-.input-content {
+div.input {
   background-color: #1fb3a2;
-  padding: 20px;
+  padding: 40px;
 }
 .sidebar {
   float: left;
@@ -209,6 +222,7 @@ p {
 
 p.selection {
 	font-weight: bold;
+	font-size: 24px;
 }
 footer {
   width: 500px;
