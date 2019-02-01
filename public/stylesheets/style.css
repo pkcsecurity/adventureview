@@ -106,20 +106,20 @@ pre {
 }
 
 body {
-  font-family: 'Georgia';
+  font-family: 'Crimson Text', serif;
   background-color: #faf9f0;
   color: #444;
 }
 
 body.home {
-  font-family: 'Georgia';
+  font-family: 'Crimson Text', serif;
   background-color: #222;
   color: #eae8e0;
   text-align: center;
 }
 
 header {
-  font-family: 'Quicksand';
+  font-family: 'Work Sans', sans-serif;
   padding: 50px 10px;
   color: #fff;
   font-size: 25px;
@@ -145,6 +145,7 @@ header {
 }
 
 .cta{
+  font-family: 'Work Sans', sans-serif;
   color: #1fb3a2;
   text-decoration: none;
 }
@@ -175,7 +176,7 @@ header {
   box-shadow: inset 0px 0px 0px 3px rgba(255,255,255,0.8), 0px 3px 0px -2px rgba(0,0,0,0.1);
 }
 .sidebar .widget h1 {
-  font-family: 'Quicksand';
+  font-family: 'Work Sans', sans-serif;
   margin: 13px 10px 4px;
   padding-bottom: 10px;
   border-bottom: 1px dotted #ddd;
