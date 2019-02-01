@@ -1,0 +1,25 @@
+{
+  "name": "adventureview",
+  "version": "1.0.0",
+  "description": "a PKC hiring game: choose your own adventure!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pkcsecurity/adventureview.git"
+  },
+  "keywords": [
+    "adventure"
+  ],
+  "author": "PKC Security",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pkcsecurity/adventureview/issues"
+  },
+  "homepage": "https://github.com/pkcsecurity/adventureview#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
