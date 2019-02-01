@@ -3,13 +3,9 @@ html
   head
     title #{title}
     link(rel='stylesheet', href='/stylesheets/style.css')
-  body
-    header
-      h1 Choose Your Own Adventure!
-    .container
+  body.home
+    .container-home
       .main-content
         block content
-      .sidebar
-        block sidebar
-    footer
-      p footer
+      a.cta
+        block cta

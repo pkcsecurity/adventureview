@@ -1,23 +1,6 @@
-/*body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
 
-a {
-  color: #00B7FF;
-}
-*/
-
-/*
- * Import nib
- */
-/*
- * Grab a custom font from Google
- */
 @import url("http://fonts.googleapis.com/css?family=Quicksand");
-/*
- * Nib provides a CSS reset
- */
+
 html,
 body,
 div,
@@ -109,15 +92,32 @@ td {
 a img {
   border: none;
 }
+
+a.cta {
+  text-decoration: none;
+  color: #1fb3a2;
+}
 /*
  * Store the main color and
  * background color as variables
  */
+pre {
+  font-family: monospace;
+}
+
 body {
   font-family: 'Georgia';
   background-color: #faf9f0;
   color: #444;
 }
+
+body.home {
+  font-family: 'Georgia';
+  background-color: #222;
+  color: #eae8e0;
+  text-align: center;
+}
+
 header {
   font-family: 'Quicksand';
   padding: 50px 10px;
@@ -137,6 +137,18 @@ header {
   margin: 50px auto;
   overflow: hidden;
 }
+
+.container-home{
+  width: 800px;
+  margin: 50px auto;
+  overflow: hidden;
+}
+
+.cta{
+  color: #1fb3a2;
+  text-decoration: none;
+}
+
 .main-content {
   float: left;
   width: 300px;
@@ -186,16 +198,3 @@ footer {
   padding-top: 5px;
   font-size: 13px;
 }
-© 2019 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
-Press h to open a hovercard with more details.
