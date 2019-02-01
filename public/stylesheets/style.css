@@ -98,6 +98,7 @@ a.cta-start {
   text-decoration: none;
   color: #1fb3a2;
   font-size: 2rem;
+  display: block;
 }
 
 a.cta {
