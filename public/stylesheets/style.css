@@ -94,8 +94,10 @@ a img {
 }
 
 a.cta {
+  margin-top: 50px;
   text-decoration: none;
   color: #1fb3a2;
+  font-size: 3.3rem;
 }
 /*
  * Store the main color and
@@ -151,8 +153,7 @@ header {
 }
 
 .main-content {
-  float: left;
-  width: 300px;
+
 }
 .main-content p {
   margin-bottom: 20px;
