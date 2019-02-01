@@ -93,11 +93,18 @@ a img {
   border: none;
 }
 
-a.cta {
+a.cta-start {
   margin-top: 50px;
   text-decoration: none;
   color: #1fb3a2;
-  font-size: 3.3rem;
+  font-size: 2rem;
+}
+
+a.cta-start {
+  margin-top: 50px;
+  text-decoration: none;
+  color: #1fb3a2;
+  font-size: 1rem;
 }
 /*
  * Store the main color and
