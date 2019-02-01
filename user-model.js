@@ -18,7 +18,7 @@ module.exports = {
             }, 
             TableName
         }; 
-           
-        return db.get(params).promise();
+        const query = db.get(params).promise();
+        return query.Item;
     }
 }
