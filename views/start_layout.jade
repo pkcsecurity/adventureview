@@ -4,8 +4,9 @@ html
     title #{title}
     link(rel='stylesheet', href='/stylesheets/style.css')
   body.home
+    header
+      h1 #{title}
     .container-home
       .main-content
         block content
-      a.cta
         block cta

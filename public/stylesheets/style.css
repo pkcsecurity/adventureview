@@ -93,10 +93,19 @@ a img {
   border: none;
 }
 
-a.cta {
+a.cta-start {
+  margin-top: 50px;
   text-decoration: none;
   color: #1fb3a2;
-  font-size: 3.3rem;
+  font-size: 2rem;
+  display: block;
+}
+
+a.cta {
+  margin-top: 50px;
+  text-decoration: none;
+  color: #1fb3a2;
+  font-size: 1rem;
 }
 /*
  * Store the main color and
@@ -129,7 +138,7 @@ header {
    * Note the use of the `main-color`
    * variable and the `darken` function
    */
-  background-color: #fa5b4d;
+  background-color: #f34e39;
   border-bottom: 1px solid #df1806;
   text-shadow: 0px -1px 0px #df1806;
 }
@@ -152,8 +161,7 @@ header {
 }
 
 .main-content {
-  float: left;
-  width: 300px;
+
 }
 .main-content p {
   margin-bottom: 20px;
@@ -192,6 +200,10 @@ header {
 }
 p {
   line-height: 1.8;
+}
+
+p.selection {
+	font-weight: bold;
 }
 footer {
   width: 500px;
