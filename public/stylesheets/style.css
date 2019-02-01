@@ -166,6 +166,11 @@ header {
 .main-content p {
   margin-bottom: 20px;
 }
+
+.input-content {
+  background-color: #1fb3a2;
+  padding: 20px;
+}
 .sidebar {
   float: left;
   width: 200px;
