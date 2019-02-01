@@ -3,10 +3,13 @@ html
   head
     title #{title}
     link(rel='stylesheet', href='/stylesheets/style.css')
-  body.home
+  body
     header
       h1 #{title}
-    .container-home
+    .container
       .main-content
         block content
-        block cta
+        block continue
+        block quit
+      div
+        block text-input
