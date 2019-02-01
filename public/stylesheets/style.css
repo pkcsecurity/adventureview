@@ -201,6 +201,10 @@ header {
 p {
   line-height: 1.8;
 }
+
+p.selection {
+	font-weight: bold;
+}
 footer {
   width: 500px;
   margin: 50px auto;
