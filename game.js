@@ -376,8 +376,92 @@ module.exports = {
   },
 
   exitCave: {
-    text: `To be continued!`,
-    actiontext: [`1. Yep.`],
+    text: `You emerge from the cave and find yourself in front of a tall house shining with glass. The sound of birds echos around you, a summer breeze is blowing, and off in the distance you can faintly hear the ocean crashing.\nA giant pops his head out the top window and looks as if he recognizes you. "You're just in time!", he rumbles, opening the normal size door below with his toes.`,
+    actiontext: [
+      `1. Step through the door`,
+      `2. Thank the giant for his kind offer, then ditch him for the beach.`
+    ],
+    actions: {
+      "1": user => {
+        user.location = "house";
+        return user;
+      },
+      "2": user => {
+        user.location = "beach";
+        return user;
+      }
+    }
+  },
+
+  beach: {
+    text: `Rather than deal with giants, you walk along the beach and watch the sunset. Maybe today isn't the right day to attempt the impossible...`,
+    actiontext: [`1. Continue`],
+    actions: {
+      "1": user => {
+        user.state.ending = "bad";
+        return user;
+      }
+    }
+  },
+
+  house: {
+    text: `You step through the doorway. "Hello?", your voice calls into the hallway. Walking down the hallway, you notice a sign over the first room that says "Interview". You step inside, and see a man sleeping, covered in cobwebs. That's weird, but not as weird as the fact that there's a lack of ambient noise to your left, along with a creeping feeling of dread.`,
+    actiontext: [`1. Turn left`, `2. Leave, and never return`],
+    actions: {
+      "1": user => {
+        user.location = "whiteboard";
+        return user;
+      },
+      "2": user => {
+        user.location = "fleehouse";
+        return user;
+      }
+    }
+  },
+
+  fleehouse: {
+    text: `You quickly turn to the right and run past the giant's large and quite hairy foot right out the door. The giant looks down from a blissful moment of peace and his eyes grow large. "You were supposed to be the chosen one!" he says theatrically, his intonation rising with each word. Once you've put some distance between yourself and that dreadful room, you decide to walk slowly to the beach and watch the sun set.`,
+    actiontext: [`1. Continue`],
+    actions: {
+      "1": user => {
+        user.state.ending = "bad";
+        return user;
+      }
+    }
+  },
+
+  whiteboard: {
+    text: `You turn, tense with anticipation, to see the EMPTY WHITEBOARD. It hangs, mockingly, swallowing thought, sound, and space. In it you see your worst fear: that you are an imposter, and not one to challenge the emptiness that is your unwritten masterpiece. The whiteboard calls to you, "Who are YOU to write on the whiteboard of your life!?"`,
+    actiontext: [
+      `1. Defiantly grab a marker and start writing furiously`,
+      `2. Leave, and never return`
+    ],
+    actions: {
+      "1": user => {
+        user.location = "fightwhiteboard";
+        return user;
+      },
+      "2": user => {
+        user.location = "fleehouse";
+        return user;
+      }
+    }
+  },
+
+  fightwhiteboard: {
+    text: ``,
+    actiontext: [``],
+    actions: {
+      "1": user => {
+        //
+        return user;
+      }
+    }
+  },
+
+  partners: {
+    text: ``,
+    actiontext: [`1. Continue`],
     actions: {
       "1": user => {
         user.state.ending = "good";
