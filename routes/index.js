@@ -51,9 +51,8 @@ router.get("/:id", async function(req, res, next) {
 // Do an action for a user then return the game view
 router.post("/:id", async function(req, res, next) {
   try {
-    console.log(req.body);
     // Format action
-    let action = req.body.action.toLowerCase();
+    let action = req.body.option.toLowerCase();
     action = action.replace(/\W/g, "");
 
     // Get user
