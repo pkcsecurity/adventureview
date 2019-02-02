@@ -38,10 +38,13 @@ router.get("/:id", async function(req, res, next) {
     switch (user.state.ending) {
       case "bad":
         res.render("fail", { title: "Game over" });
+        break;
       case "good":
         res.render("success", { title: "You win!", userId: user.id });
+        break;
       default:
         res.render("game", { location: game[user.location], userId: user.id });
+        break;
     }
   } catch (e) {
     next(e);
