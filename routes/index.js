@@ -49,7 +49,7 @@ router.get("/:id", async function(req, res, next) {
 });
 
 // Do an action for a user then return the game view
-router.post("/:id/", async function(req, res, next) {
+router.post("/:id", async function(req, res, next) {
   try {
     console.log(req.body);
     // Format action
