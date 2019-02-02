@@ -255,6 +255,7 @@ module.exports = {
     actions: {
       "1": user => {
         user.location = "exitCave";
+        user.state.wisdom = true;
         return user;
       }
     }
@@ -302,6 +303,7 @@ module.exports = {
     actions: {
       "1": user => {
         user.location = "exitCave";
+        user.state.humility = true;
         return user;
       }
     }
@@ -367,6 +369,7 @@ module.exports = {
     actions: {
       "1": user => {
         user.location = "exitCave";
+        user.state.integrity = true;
         return user;
       }
     }
