@@ -22,7 +22,7 @@ module.exports = {
     actiontext: [`Why indeed?`],
     actions: {
       "1": user => {
-        user.state.ending = false;
+        user.state.ending = "bad";
         return user;
       }
     }
