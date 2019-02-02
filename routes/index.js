@@ -11,7 +11,7 @@ router.get("/", function(req, res, next) {
 });
 
 // Create new user and start game
-router.post("/", async function(req, res, next) {
+router.get("/start", async function(req, res, next) {
   try {
     // Create new user
     const id = uuid();
@@ -24,7 +24,7 @@ router.post("/", async function(req, res, next) {
     await userModel.save(user);
 
     // Render game view
-    render(res, user, next);
+    res.redirect("/" + user.id);
   } catch (e) {
     next(e);
   }
@@ -35,9 +35,14 @@ router.get("/:id", async function(req, res, next) {
   try {
     // Get user
     const user = await userModel.get(req.params.id);
-
-    // Render game view
-    render(res, user, next);
+    switch (user.state.ending) {
+      case "bad":
+        res.render("fail");
+      case "good":
+        res.render("success");
+      default:
+        res.render("game", { location: game[user.location] });
+    }
   } catch (e) {
     next(e);
   }
@@ -56,25 +61,10 @@ router.post("/:id/:action", async function(req, res, next) {
     await userModel.save(user);
 
     // Render game view
-    render(res, user, next);
+    res.redirect("/" + user.id);
   } catch (e) {
     next(e);
   }
 });
-
-function render(res, user, next) {
-  try {
-    switch (user.state.ending) {
-      case "bad":
-        res.render("fail");
-      case "good":
-        res.render("success");
-      default:
-        res.render("game", { location: game[user.location] });
-    }
-  } catch (e) {
-    next(e);
-  }
-}
 
 module.exports = router;

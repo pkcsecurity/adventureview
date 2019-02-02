@@ -1,4 +1,5 @@
 const AWS = require("aws-sdk");
+AWS.config.update({ region: "us-west-2" });
 const TableName = "adventureuser";
 const db = new AWS.DynamoDB.DocumentClient();
 
@@ -6,7 +7,8 @@ module.exports = {
   save: async user => {
     let params = {
       Item: user,
-      TableName
+      TableName,
+      ConsistentRead: true
     };
 
     return db.put(params).promise();
@@ -16,9 +18,10 @@ module.exports = {
       Key: {
         id
       },
-      TableName
+      TableName,
+      ConsistentRead: true
     };
-    const query = db.get(params).promise();
+    const query = await db.get(params).promise();
     return query.Item;
   }
 };

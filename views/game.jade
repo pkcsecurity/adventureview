@@ -1,20 +1,17 @@
-extends start_layout
+extends game_layout
 
 block content
-  p It’s another day at MicroSloth. You're at your desk, idly wondering if your project manager will finally read your email about why this project to automatically identify breeds of birds in photos would take way more than two months of work.
-
-  p All of a sudden, Slack dings. It had been a long time since you heard that sound. Joey from marketing says, "Have you seen this?" and includes a link to pkc.io/apply. You roll your eyes, "Ugh, another company that promises fun and freedom but is really looking for a cog in their money machine."
+  p #{location.text}
 
   h2 Here are your options:
 
-block continue
-  p.selection (1) Still, may as well click the link
-
-block quit
-  p.selection (2) Nah, I got a good thing going here, I barely have to do anything! 
+block actions
+  - for (let action of #{location.actiontext}) {
+  p.selection #{action}
 
 block text-input
   div.input
     h2.light Type in your option:
+    form(method="POST", action="/useridgoeshere")
     input(type="text", name="option" id="option" placeholder="your option")
     input(type="submit", value="Submit")

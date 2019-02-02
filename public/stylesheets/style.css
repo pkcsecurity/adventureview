@@ -218,9 +218,12 @@ div.input {
 }
 p {
   line-height: 1.8;
+  font-size: 24px;
 }
 
 p.selection {
+	color: #222;
+	font-family: 'Work Sans', sans-serif;
 	font-weight: bold;
 	font-size: 24px;
 }
