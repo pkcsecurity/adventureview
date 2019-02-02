@@ -3,10 +3,11 @@ html
   head
     title #{title}
     link(rel='stylesheet', href='/stylesheets/style.css')
+    - function randomImage(n) { return 1+Math.floor(Math.random() * Math.floor(n));}
   body
     header
       h1 #{title}
-    .container
+    .container(style='background-image: url(/images/bg-'+randomImage(3)+'.png);')
       .main-content
         block content
         block continue
