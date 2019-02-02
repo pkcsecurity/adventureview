@@ -144,6 +144,12 @@ body.home {
   text-align: center;
 }
 
+
+body.home p {
+	color: #fbfaf3;
+	line-height: 30px;
+  font-size: 20px;
+}
 header {
   font-family: 'Work Sans', sans-serif;
   padding: 50px 10px;
@@ -159,7 +165,7 @@ header {
   text-shadow: 0px -1px 0px #df1806;
 }
 .container {
-  width: 600px;
+  width: 500px;
   margin: 50px auto;
   overflow: hidden;
 }
