@@ -24,7 +24,7 @@ router.post("/", async function(req, res, next) {
     await userModel.save(user);
 
     // Render game view
-    res.render("game", { location: game[user.location] });
+    render(res, user, next);
   } catch (e) {
     next(e);
   }
@@ -37,7 +37,7 @@ router.get("/:id", async function(req, res, next) {
     const user = await userModel.get(req.params.id);
 
     // Render game view
-    res.render("game", { location: game[user.location] });
+    render(res, user, next);
   } catch (e) {
     next(e);
   }
@@ -56,10 +56,25 @@ router.post("/:id/:action", async function(req, res, next) {
     await userModel.save(user);
 
     // Render game view
-    res.render("game", { location: game[user.location] });
+    render(res, user, next);
   } catch (e) {
     next(e);
   }
 });
+
+function render(res, user, next) {
+  try {
+    switch (user.state.ending) {
+      case "bad":
+        res.render("fail");
+      case "good":
+        res.render("success");
+      default:
+        res.render("game", { location: game[user.location] });
+    }
+  } catch (e) {
+    next(e);
+  }
+}
 
 module.exports = router;
