@@ -449,19 +449,19 @@ module.exports = {
   },
 
   fightwhiteboard: {
-    text: ``,
-    actiontext: [``],
+    text: `The whiteboard shrieks with agony as you cover it with flowcharts, code that actually compiles, and excellent documentation that's brief enough to be useful. You steeple your fingers at the end and smile. "You're no match for me today, emptiness." You feel amazing. You've shipped.`,
+    actiontext: [`1. Continue`],
     actions: {
       "1": user => {
-        //
+        user.location = "partners";
         return user;
       }
     }
   },
 
   partners: {
-    text: ``,
-    actiontext: [`1. Continue`],
+    text: `In the midst of your victory you hear three voices animatedly chatting with each other about topics ranging from space lasers to upsell potential. In walk THE PARTNERS.\n"CONGRATUATIONS", bellows the CONSULTINATOR. "YOU MADE IT TO DA CHOPPA!".\n"I appreciate your fine work here", the youthful partner with grey hair calmly intonates. "This provides excellent value for our clients."\n"WOW, I LIKE YOUR PERFORMANCE MORE THAN I LIKE TURTLES!" squeals the last partner. "Have you considered trying to solve impossible problems?"`,
+    actiontext: [`1. YES`],
     actions: {
       "1": user => {
         user.state.ending = "good";
