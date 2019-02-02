@@ -1,14 +1,14 @@
 doctype
 html
   head
-    title #{title}
+    title Game
     link(rel='stylesheet', href='/stylesheets/style.css')
     - function randomImage(n) { return 1+Math.floor(Math.random() * Math.floor(n));}
-  body
+  body.container(style='background-image: url(/images/bg-'+randomImage(3)+'.png);')
     header
-      h1 #{title}
-    .container(style='background-image: url(/images/bg-'+randomImage(3)+'.png);')
-      .main-content
+      h1 Game
+    
+      div.main-content
         block content
         block actions
       div
