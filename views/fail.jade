@@ -1,0 +1,13 @@
+doctype
+html
+  head
+    title Game
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    - function randomImage(n) { return 1+Math.floor(Math.random() * Math.floor(n));}
+  body(style='background-image: url(/images/bg-'+randomImage(3)+'.png);')
+    header
+      h1 Game Over
+    
+    div.main-content.container
+      p Yep, it's really over.
+      a(href="/") Try again >
