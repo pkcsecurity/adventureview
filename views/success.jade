@@ -1,4 +1,4 @@
-extends index_layout
+extends game_layout
 
 block content
   p
@@ -13,6 +13,4 @@ block content
   p You seem like a cool person who might fit in at PKC Security! Why don't you send us your resume? Include your user ID for this game to get a jump-start in our hiring process!
   p Your User ID: #{userId}
   br
-      
-block cta
   a.cta-start(href=`mailto:jobs@pkc.io?subject=Beat%20the%20Game&body=${userId}`) Email us your resume >
