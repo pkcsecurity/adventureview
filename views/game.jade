@@ -11,6 +11,6 @@ block actions
 block text-input
   div.input
     h2.light Type in your option:
-    form(method="POST", action="/useridgoeshere")
+    form(method="POST", action="/" + #{userId})
     input(type="text", name="option" id="option" placeholder="your option")
     input(type="submit", value="Submit")

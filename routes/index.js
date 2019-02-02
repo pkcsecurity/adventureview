@@ -41,7 +41,7 @@ router.get("/:id", async function(req, res, next) {
       case "good":
         res.render("success");
       default:
-        res.render("game", { location: game[user.location] });
+        res.render("game", { location: game[user.location], userId: user.id });
     }
   } catch (e) {
     next(e);
@@ -49,10 +49,11 @@ router.get("/:id", async function(req, res, next) {
 });
 
 // Do an action for a user then return the game view
-router.post("/:id/:action", async function(req, res, next) {
+router.post("/:id/", async function(req, res, next) {
   try {
+    console.log(req.body);
     // Format action
-    let action = req.params.action.toLowerCase();
+    let action = req.body.action.toLowerCase();
     action = action.replace(/\W/g, "");
 
     // Get user
