@@ -183,6 +183,29 @@ header {
 div.input {
   background-color: #1fb3a2;
   padding: 40px;
+	text-align: center;
+}
+
+::placeholder {
+color: #b0b0ad;
+	font-family: 'Work Sans', sans-serif;
+}
+input {
+	
+	background-color: #fff;
+	font-family: 'Work Sans', sans-serif;
+	color: #222;
+}
+
+
+input.submit {
+
+background-color: #FBA217;
+color: #FBFAF3;
+font-family: 'Work Sans', sans-serif;
+font-weight: bold;
+text-transform: uppercase;
+	
 }
 .sidebar {
   float: left;
