@@ -377,7 +377,7 @@ module.exports = {
     actiontext: [`1. Yep.`],
     actions: {
       "1": user => {
-        user.location = "somewhere?";
+        user.state.ending = "good";
         return user;
       }
     }
