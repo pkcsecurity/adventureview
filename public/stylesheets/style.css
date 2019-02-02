@@ -97,6 +97,7 @@ color: #222;
 font-family: 'Work Sans', sans-serif;
 font-weight: bold;
 text-transform: uppercase;
+font-size: 24px;
 
 }
 h2.light {
@@ -242,15 +243,15 @@ text-transform: uppercase;
   margin-bottom: 10px;
 }
 p {
-  line-height: 1.8;
-  font-size: 24px;
+  line-height: 30px;
+  font-size: 18px;
 }
 
 p.selection {
 	color: #222;
 	font-family: 'Work Sans', sans-serif;
-	font-weight: bold;
-	font-size: 24px;
+	font-size: 18px;
+	line-height: 30px
 }
 footer {
   width: 500px;
