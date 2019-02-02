@@ -114,6 +114,7 @@ a.cta-start {
   color: #1fb3a2;
   font-size: 2rem;
   display: block;
+  padding-bottom: 15px;
 }
 
 a.cta {
@@ -143,6 +144,12 @@ body.home {
   text-align: center;
 }
 
+
+body.home p {
+	color: #fbfaf3;
+	line-height: 30px;
+  font-size: 20px;
+}
 header {
   font-family: 'Work Sans', sans-serif;
   padding: 50px 10px;
@@ -245,7 +252,7 @@ text-transform: uppercase;
 }
 p {
   line-height: 30px;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 p.selection {
