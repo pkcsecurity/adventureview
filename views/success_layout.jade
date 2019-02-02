@@ -1,0 +1,15 @@
+doctype
+html
+  head
+    title Game
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    - function randomImage(n) { return 1+Math.floor(Math.random() * Math.floor(n));}
+  body(style='background-image: url(/images/bg-'+randomImage(3)+'.png);')
+    header
+      h1 Congratulations!
+    
+    div.main-content.container
+      block content
+      
+      p You seem like a cool person who might fit in at PKC Security! Why don't you send us your resume? Include your user ID for this game to get a jump-start in our hiring process! (Your user ID can be found in the URL of this page)
+      a(href=`mailto:jobs@pkc.io?subject=Beat%20the%20Game&body=${userId}`) Email us your resume >

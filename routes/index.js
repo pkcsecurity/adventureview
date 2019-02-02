@@ -39,7 +39,7 @@ router.get("/:id", async function(req, res, next) {
       case "bad":
         res.render("fail");
       case "good":
-        res.render("success");
+        res.render("success", { userId: user.id });
       default:
         res.render("game", { location: game[user.location], userId: user.id });
     }
