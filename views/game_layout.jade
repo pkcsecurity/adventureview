@@ -4,11 +4,11 @@ html
     title Game
     link(rel='stylesheet', href='/stylesheets/style.css')
     - function randomImage(n) { return 1+Math.floor(Math.random() * Math.floor(n));}
-  body.container(style='background-image: url(/images/bg-'+randomImage(3)+'.png);')
+  body(style='background-image: url(/images/bg-'+randomImage(3)+'.png);')
     header
       h1 Game
     
-    div.main-content
+    div.main-content.container
       block content
       block actions
       block text-input
