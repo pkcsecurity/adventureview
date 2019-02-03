@@ -1,5 +1,4 @@
-
-@import url('https://fonts.googleapis.com/css?family=Crimson+Text|Work+Sans');
+@import url("https://fonts.googleapis.com/css?family=Crimson+Text|Work+Sans");
 
 html,
 body,
@@ -93,20 +92,19 @@ a img {
   border: none;
 }
 h2 {
-color: #222;
-font-family: 'Work Sans', sans-serif;
-font-weight: bold;
-text-transform: uppercase;
-font-size: 18px;
-	margin-bottom: 15px;
-
+  color: #222;
+  font-family: "Work Sans", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 18px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 h2.light {
-color: #FBFAF3;
-font-family: 'Work Sans', sans-serif;
-font-weight: bold;
-text-transform: uppercase;
-
+  color: #fbfaf3;
+  font-family: "Work Sans", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 a.cta-start {
   margin-top: 50px;
@@ -132,31 +130,30 @@ pre {
 }
 
 body {
-  font-family: 'Crimson Text', serif;
+  font-family: "Crimson Text", serif;
   background-color: #faf9f0;
   color: #444;
 }
 
 body.home {
-  font-family: 'Crimson Text', serif;
+  font-family: "Crimson Text", serif;
   background-color: #222;
   color: #eae8e0;
   text-align: center;
 }
 
-
 body.home p {
-	color: #fbfaf3;
-	line-height: 30px;
+  color: #fbfaf3;
+  line-height: 30px;
   font-size: 20px;
 }
 header {
-  font-family: 'Work Sans', sans-serif;
+  font-family: "Work Sans", sans-serif;
   padding: 50px 10px;
   color: #fff;
   font-size: 25px;
   text-align: center;
-/*
+  /*
    * Note the use of the `main-color`
    * variable and the `darken` function
    */
@@ -165,25 +162,26 @@ header {
   text-shadow: 0px -1px 0px #df1806;
 }
 .container {
-  width: 600px;
+  width: 620px;
   margin: 50px auto;
   overflow: hidden;
+  background-color: rgba(251, 250, 243, 0.8);
+  padding: 10px;
 }
 
-.container-home{
+.container-home {
   width: 800px;
   margin: 50px auto;
   overflow: hidden;
 }
 
-.cta{
-  font-family: 'Work Sans', sans-serif;
+.cta {
+  font-family: "Work Sans", sans-serif;
   color: #1fb3a2;
   text-decoration: none;
 }
 
 .main-content {
-
 }
 .main-content p {
   margin-bottom: 20px;
@@ -192,38 +190,34 @@ header {
 div.input {
   background-color: #1fb3a2;
   padding: 40px;
-	text-align: center;
+  text-align: center;
 }
 
 ::placeholder {
-color: #b0b0ad;
-	font-family: 'Work Sans', sans-serif;
+  color: #b0b0ad;
+  font-family: "Work Sans", sans-serif;
 }
 input {
-	
-	background-color: #fff;
-	font-family: 'Work Sans', sans-serif;
-	color: #222;
-	border: 0px;
-	padding: 10px;
+  background-color: #fff;
+  font-family: "Work Sans", sans-serif;
+  color: #222;
+  border: 0px;
+  padding: 10px;
 }
 
-
 input.submit {
-
-background-color: #FBA217;
-color: #FBFAF3;
-font-family: 'Work Sans', sans-serif;
-font-weight: bold;
-text-transform: uppercase;
-	
+  background-color: #fba217;
+  color: #fbfaf3;
+  font-family: "Work Sans", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 .sidebar {
   float: left;
   width: 200px;
 }
 .sidebar .widget {
-/*
+  /*
      * Note the lack of vendor
      * prefixes here. Nib will
      * add them for us
@@ -233,11 +227,13 @@ text-transform: uppercase;
   border: 1px solid #ccc;
   margin-left: 20px;
   background-color: #faf9f0;
-  -webkit-box-shadow: inset 0px 0px 0px 3px rgba(255,255,255,0.8), 0px 3px 0px -2px rgba(0,0,0,0.1);
-  box-shadow: inset 0px 0px 0px 3px rgba(255,255,255,0.8), 0px 3px 0px -2px rgba(0,0,0,0.1);
+  -webkit-box-shadow: inset 0px 0px 0px 3px rgba(255, 255, 255, 0.8),
+    0px 3px 0px -2px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0px 0px 0px 3px rgba(255, 255, 255, 0.8),
+    0px 3px 0px -2px rgba(0, 0, 0, 0.1);
 }
 .sidebar .widget h1 {
-  font-family: 'Work Sans', sans-serif;
+  font-family: "Work Sans", sans-serif;
   margin: 13px 10px 4px;
   padding-bottom: 10px;
   border-bottom: 1px dotted #ddd;
@@ -256,10 +252,10 @@ p {
 }
 
 p.selection {
-	color: #222;
-	font-family: 'Work Sans', sans-serif;
-	font-size: 18px;
-	line-height: 30px
+  color: #222;
+  font-family: "Work Sans", sans-serif;
+  font-size: 18px;
+  line-height: 30px;
 }
 footer {
   width: 500px;
