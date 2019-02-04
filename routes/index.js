@@ -62,6 +62,11 @@ router.post("/:id", async function(req, res, next) {
     // Get user
     let user = await userModel.get(req.params.id);
     const location = game[userModel.currentLocation(user)];
+
+    // To keep user input from accessing built in instance functions
+    if (!location.actions.hasOwnProperty(action)) {
+      throw new Error("Invalid user choice");
+    }
     user = location.actions[action](user);
     await userModel.save(user);
 
