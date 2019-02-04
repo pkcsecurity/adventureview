@@ -23,5 +23,8 @@ module.exports = {
     };
     const query = await db.get(params).promise();
     return query.Item;
+  },
+  currentLocation: user => {
+    return user.locationHistory[user.locationHistory.length - 1];
   }
 };

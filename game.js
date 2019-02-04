@@ -7,12 +7,10 @@ module.exports = {
     ],
     actions: {
       "1": user => {
-        user.location = "wilderness";
-        return user;
+        return moveUser(user, "wilderness");
       },
       "2": user => {
-        user.location = "quickEnding";
-        return user;
+        return moveUser(user, "quickEnding");
       }
     }
   },
@@ -36,12 +34,10 @@ module.exports = {
     ],
     actions: {
       "1": user => {
-        user.location = "run";
-        return user;
+        return moveUser(user, "run");
       },
       "2": user => {
-        user.location = "email";
-        return user;
+        return moveUser(user, "email");
       }
     }
   },
@@ -51,8 +47,7 @@ module.exports = {
     actiontext: [`1. Continue...`],
     actions: {
       "1": user => {
-        user.location = "desert";
-        return user;
+        return moveUser(user, "desert");
       }
     }
   },
@@ -63,8 +58,7 @@ module.exports = {
     actions: {
       "1": user => user,
       "2": user => {
-        user.location = "desert";
-        return user;
+        return moveUser(user, "desert");
       }
     }
   },
@@ -79,20 +73,16 @@ module.exports = {
     ],
     actions: {
       "1": user => {
-        user.location = "sand";
-        return user;
+        return moveUser(user, "sand");
       },
       "2": user => {
-        user.location = "attemptOasis";
-        return user;
+        return moveUser(user, "attemptOasis");
       },
       "3": user => {
-        user.location = "wander";
-        return user;
+        return moveUser(user, "wander");
       },
       "4": user => {
-        user.location = "underground";
-        return user;
+        return moveUser(user, "underground");
       }
     }
   },
@@ -105,12 +95,10 @@ module.exports = {
     ],
     actions: {
       "1": user => {
-        user.location = "attemptOasis";
-        return user;
+        return moveUser(user, "attemptOasis");
       },
       "2": user => {
-        user.location = "desert";
-        return user;
+        return moveUser(user, "desert");
       }
     }
   },
@@ -120,12 +108,10 @@ module.exports = {
     actiontext: [`1. Explore Sand Dunes`, `2. Go back to the Tiger`],
     actions: {
       "1": user => {
-        user.location = "sand";
-        return user;
+        return moveUser(user, "sand");
       },
       "2": user => {
-        user.location = "desert";
-        return user;
+        return moveUser(user, "desert");
       }
     }
   },
@@ -135,8 +121,7 @@ module.exports = {
     actiontext: [`1. Continue...`],
     actions: {
       "1": user => {
-        user.location = "desert";
-        return user;
+        return moveUser(user, "desert");
       }
     }
   },
@@ -149,12 +134,10 @@ module.exports = {
     ],
     actions: {
       "1": user => {
-        user.location = "campfire";
-        return user;
+        return moveUser(user, "campfire");
       },
       "2": user => {
-        user.location = "voices";
-        return user;
+        return moveUser(user, "voices");
       }
     }
   },
@@ -167,12 +150,10 @@ module.exports = {
     ],
     actions: {
       "1": user => {
-        user.location = "gratefulBeggar";
-        return user;
+        return moveUser(user, "gratefulBeggar");
       },
       "2": user => {
-        user.location = "voices";
-        return user;
+        return moveUser(user, "voices");
       }
     }
   },
@@ -182,8 +163,7 @@ module.exports = {
     actiontext: [`1. Start looking for a way out of the cave`],
     actions: {
       "1": user => {
-        user.location = "voices";
-        return user;
+        return moveUser(user, "voices");
       }
     }
   },
@@ -197,16 +177,13 @@ module.exports = {
     ],
     actions: {
       "1": user => {
-        user.location = "hangry";
-        return user;
+        return moveUser(user, "hangry");
       },
       "2": user => {
-        user.location = "child";
-        return user;
+        return moveUser(user, "child");
       },
       "3": user => {
-        user.location = "explorer";
-        return user;
+        return moveUser(user, "explorer");
       }
     }
   },
@@ -221,12 +198,10 @@ module.exports = {
     actions: {
       "1": user => user,
       "2": user => {
-        user.location = "wisdom";
-        return user;
+        return moveUser(user, "wisdom");
       },
       "3": user => {
-        user.location = "sadgry";
-        return user;
+        return moveUser(user, "sadgry");
       }
     }
   },
@@ -239,12 +214,10 @@ module.exports = {
     ],
     actions: {
       "1": user => {
-        user.location = "hangry";
-        return user;
+        return moveUser(user, "hangry");
       },
       "2": user => {
-        user.location = "exitCave";
-        return user;
+        return moveUser(user, "exitCave");
       }
     }
   },
@@ -254,9 +227,8 @@ module.exports = {
     actiontext: [`1. Continue past the barbarian, out of the cave`],
     actions: {
       "1": user => {
-        user.location = "exitCave";
         user.state.wisdom = true;
-        return user;
+        return moveUser(user, "exitCave");
       }
     }
   },
@@ -269,12 +241,10 @@ module.exports = {
     ],
     actions: {
       "1": user => {
-        user.location = "humility";
-        return user;
+        return moveUser(user, "humility");
       },
       "2": user => {
-        user.location = "nobeans";
-        return user;
+        return moveUser(user, "nobeans");
       }
     }
   },
@@ -287,12 +257,10 @@ module.exports = {
     ],
     actions: {
       "1": user => {
-        user.location = "exitCave";
-        return user;
+        return moveUser(user, "exitCave");
       },
       "2": user => {
-        user.location = "child";
-        return user;
+        return moveUser(user, "child");
       }
     }
   },
@@ -302,9 +270,8 @@ module.exports = {
     actiontext: [`1. Continue on out of the cave`],
     actions: {
       "1": user => {
-        user.location = "exitCave";
         user.state.humility = true;
-        return user;
+        return moveUser(user, "exitCave");
       }
     }
   },
@@ -317,12 +284,10 @@ module.exports = {
     ],
     actions: {
       "1": user => {
-        user.location = "sadExplorer";
-        return user;
+        return moveUser(user, "sadExplorer");
       },
       "2": user => {
-        user.location = "doorPuzzle";
-        return user;
+        return moveUser(user, "doorPuzzle");
       }
     }
   },
@@ -335,12 +300,10 @@ module.exports = {
     ],
     actions: {
       "1": user => {
-        user.location = "caveExit";
-        return user;
+        return moveUser(user, "caveExit");
       },
       "2": user => {
-        user.location = "doorPuzzle";
-        return user;
+        return moveUser(user, "doorPuzzle");
       }
     }
   },
@@ -353,12 +316,10 @@ module.exports = {
     ],
     actions: {
       "1": user => {
-        user.location = "sadExplorer";
-        return user;
+        return moveUser(user, "sadExplorer");
       },
       "2": user => {
-        user.location = "integrity";
-        return user;
+        return moveUser(user, "integrity");
       }
     }
   },
@@ -368,9 +329,8 @@ module.exports = {
     actiontext: [`1. Continue on toward the cave exit`],
     actions: {
       "1": user => {
-        user.location = "exitCave";
         user.state.integrity = true;
-        return user;
+        return moveUser(user, "exitCave");
       }
     }
   },
@@ -383,12 +343,10 @@ module.exports = {
     ],
     actions: {
       "1": user => {
-        user.location = "house";
-        return user;
+        return moveUser(user, "house");
       },
       "2": user => {
-        user.location = "beach";
-        return user;
+        return moveUser(user, "beach");
       }
     }
   },
@@ -409,12 +367,10 @@ module.exports = {
     actiontext: [`1. Turn left`, `2. Leave, and never return`],
     actions: {
       "1": user => {
-        user.location = "whiteboard";
-        return user;
+        return moveUser(user, "whiteboard");
       },
       "2": user => {
-        user.location = "fleehouse";
-        return user;
+        return moveUser(user, "fleehouse");
       }
     }
   },
@@ -438,12 +394,10 @@ module.exports = {
     ],
     actions: {
       "1": user => {
-        user.location = "fightwhiteboard";
-        return user;
+        return moveUser(user, "fightwhiteboard");
       },
       "2": user => {
-        user.location = "fleehouse";
-        return user;
+        return moveUser(user, "fleehouse");
       }
     }
   },
@@ -453,8 +407,7 @@ module.exports = {
     actiontext: [`1. Continue`],
     actions: {
       "1": user => {
-        user.location = "partners";
-        return user;
+        return moveUser(user, "partners");
       }
     }
   },
@@ -470,3 +423,8 @@ module.exports = {
     }
   }
 };
+
+function moveUser(user, location) {
+  user.locationHistory.push(location);
+  return user;
+}

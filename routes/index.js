@@ -17,8 +17,8 @@ router.get("/start", async function(req, res, next) {
     const id = uuid();
     const user = {
       id,
-      location: startLocation,
-      state: {}
+      state: {},
+      locationHistory: [startLocation]
     };
     // Save new user to DB
     await userModel.save(user);
@@ -43,7 +43,8 @@ router.get("/:id", async function(req, res, next) {
         res.render("success", { title: "You win!", userId: user.id });
         break;
       default:
-        res.render("game", { location: game[user.location], userId: user.id });
+        const location = game[userModel.currentLocation(user)];
+        res.render("game", { location, userId: user.id });
         break;
     }
   } catch (e) {
@@ -60,7 +61,8 @@ router.post("/:id", async function(req, res, next) {
 
     // Get user
     let user = await userModel.get(req.params.id);
-    user = game[user.location].actions[action](user);
+    const location = game[userModel.currentLocation(user)];
+    user = location.actions[action](user);
     await userModel.save(user);
 
     // Render game view
