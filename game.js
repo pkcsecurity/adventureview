@@ -300,7 +300,7 @@ module.exports = {
     ],
     actions: {
       "1": user => {
-        return moveUser(user, "caveExit");
+        return moveUser(user, "exitCave");
       },
       "2": user => {
         return moveUser(user, "doorPuzzle");
