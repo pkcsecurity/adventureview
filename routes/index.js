@@ -1,8 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const userModel = require("../user-model");
-const uuid = require("uuid/v4");
-const startLocation = "corporatePeon";
+const gameUtils = require("../game-utils");
 const game = require("../game");
 
 /* GET home page. */
@@ -14,12 +13,8 @@ router.get("/", function(req, res, next) {
 router.get("/start", async function(req, res, next) {
   try {
     // Create new user
-    const id = uuid();
-    const user = {
-      id,
-      state: {},
-      locationHistory: [startLocation]
-    };
+    const user = gameUtils.createUser();
+
     // Save new user to DB
     await userModel.save(user);
 
