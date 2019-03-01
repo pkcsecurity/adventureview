@@ -78,3 +78,10 @@ typings/
 
 # DynamoDB Local files
 .dynamodb/
+
+# package directories
+node_modules
+jspm_packages
+
+# Serverless directories
+.serverless
