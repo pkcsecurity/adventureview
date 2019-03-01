@@ -1,10 +1,10 @@
 {
   "name": "adventureview",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www",
-    "first-time": "sls dynamodb install",
+    "start": "sls offline start",
+    "first-time": "npm i -g serverless && npm i && sls dynamodb install --localPath ./bin",
     "graph": "node ./scripts/generateGraph.js"
   },
   "dependencies": {
