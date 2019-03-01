@@ -19,7 +19,7 @@ router.get("/start", async function(req, res, next) {
     await userModel.save(user);
 
     // Render game view
-    res.redirect("/" + user.id);
+    res.redirect(user.id);
   } catch (e) {
     next(e);
   }
@@ -66,7 +66,7 @@ router.post("/:id", async function(req, res, next) {
     await userModel.save(user);
 
     // Render game view
-    res.redirect("/" + user.id);
+    res.redirect(user.id);
   } catch (e) {
     next(e);
   }

@@ -1,12 +1,12 @@
 doctype
 html
   head
-    title Game
-    link(rel='stylesheet', href='/stylesheets/style.css')
+    title PKC Adventure Interview Game
+    link(rel='stylesheet', href='stylesheets/style.css')
     - function randomImage(n) { return 1+Math.floor(Math.random() * Math.floor(n));}
-  body(style='background-image: url(/images/bg-'+randomImage(3)+'.png);')
+  body(style='background-image: url(images/bg-'+randomImage(3)+'.png);')
     header
-      h1 Game
+      h1 PKC Adventure Interview Game
     div.main-content.container
       block content
       block actions
