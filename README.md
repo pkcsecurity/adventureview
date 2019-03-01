@@ -19,4 +19,4 @@ If you want to change the game text or options, check out `game.js` at the proje
 
 ## Deploy
 
-If you have AWS creds, you can deploy by running `sls deploy`. This will (until we have separate dev and prod cloud environments) immediately update game.pkc.io, so choose wisely.
+If you have AWS creds, you can deploy by running `sls deploy`. This will (until we have separate dev and prod cloud environments) **immediately update game.pkc.io**, so choose wisely.
